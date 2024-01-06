@@ -1,2 +1,3 @@
 # todo-app-django
-## Dockerized
+## Dockerized and also added git hook trigger pipelines
+

@@ -25,7 +25,7 @@ Before getting started, make sure you have the following installed:
 1. **Clone the Repository:**
 
     ```bash
-    git clone https://github.com/Piyushbankhede/todo-app-django.git
+    git clone https://github.com/your-username/todo-app.git
     cd todo-app
     ```
 
@@ -50,7 +50,6 @@ Before getting started, make sure you have the following installed:
     - Create an account on [Docker Hub](https://hub.docker.com/).
     - Set up a new repository for your ToDo app.
     - Ensure your Jenkins pipeline is configured to push the Docker image to this repository.
-    - To install todo-images (cantainer) [todo-app-images](https://hub.docker.com/repository/docker/piyushbankhede/todo-app/general)
 
 5. **AWS Deployment:**
 
@@ -62,50 +61,21 @@ Before getting started, make sure you have the following installed:
 
     - Trigger the Jenkins pipeline manually or set up a webhook for automatic builds.
     - The pipeline will build the Docker image, push it to Docker Hub, and deploy it on your AWS instance.
-    
 
 7. **Access the Deployed App:**
 
     Visit your AWS EC2 instance's public IP or domain to access the deployed ToDo app.
 
+## Directory Structure
 
-8. **some important configuration:**
-
-
-    ![jenkins conf.](screenshot/Screenshot%202024-01-07%20012544.png) 
-
-   - In this you have to paste your github (source code )link and configure it
- 
-    ![build trigger](screenshot/Screenshot%202024-01-07%20012557.png)
-
-   - you have to enable a trigger to automate your pipeline so here we can use a  ->"Github Hook triggers GITScm polling " trigger
-    
-    ![github/todo](screenshot/Screenshot%202024-01-07%20013247.png)   
-    
-     - In github we have to configure a webook to connect to jenkins 
-
-     ![github-webook](screenshot/Screenshot%202024-01-07%20013315.png) 
-     
-    - here we can create a webhook and assign it to jenkis
-
-     ![todo-build toto-deploy](screenshot/Screenshot%202024-01-07%20012451.png) 
-
-    - here our both build and deploy job are run 
-
-     ![dockerhub-images](screenshot/Screenshot%202024-01-07%20013607.png)
-
-     - Docker images recived by verion vise 
-
-    ![final-app](screenshot/Screenshot%202024-01-12%20163210.png)
-      
-
-     
+- `src/`: Contains the Django application source code.
+- `Jenkinsfile`: Jenkins pipeline configuration for CI/CD.
+- `Dockerfile`: Docker configuration for containerizing the app.
+- `requirements.txt`: Python dependencies for the Django app.
 
 ## Contributing
 
 Feel free to contribute to the project by opening issues or submitting pull requests.
-
-
 
 ## License
 
